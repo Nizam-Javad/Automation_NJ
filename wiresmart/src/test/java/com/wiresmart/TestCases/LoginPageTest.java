@@ -3,12 +3,14 @@ package com.wiresmart.TestCases;
 import com.wiresmart.Pages.BaseTest;
 import com.wiresmart.Pages.LoginPage;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginPageTest extends BaseTest {
-    LoginPage loginPage;
+    public LoginPage loginPage ;
+        //= new LoginPage();
 
 
     @BeforeMethod
@@ -22,21 +24,24 @@ public class LoginPageTest extends BaseTest {
         System.out.println("PT is " + PT);
         System.out.println("Hi");*/
         BaseTest.initializeDriver();
-        //Login login = new Login();
+        loginPage = new LoginPage();
         // homepage= new HomePage();
        // homepage = loginPage.enterCredentials();
 
     }
 
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void loginPageTest() throws InterruptedException {
-        loginPage= new LoginPage();
+
         loginPage.enterCredentials();
     }
 
     @Test(priority = 1)
     public void verifyLoginPageTitleTest(){
+
+        String loginTitle=loginPage.LoginPageTitle();
+        Assert.assertEquals(loginTitle,"Swag Labs");
 
     }
 

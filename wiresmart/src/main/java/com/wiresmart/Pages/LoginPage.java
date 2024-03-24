@@ -3,11 +3,14 @@ package com.wiresmart.Pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+//import org.testng.*;
 
 
 
 
 public class LoginPage extends BaseTest {
+
+   // LoginPage loginPage= new LoginPage();
 
     @FindBy(xpath = "//div[@class='login_logo' and text()='Swag Labs']")
     WebElement pageTitle;
@@ -25,26 +28,24 @@ public class LoginPage extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    public static String LoginPageTitle() {
-        System.out.println(driver.getTitle());
-        return driver.getTitle();
-    }
 
 
-    public void enterCredentials() {
+
+    public HomePage enterCredentials() {
         userName.sendKeys(properties.getProperty("username"));
         password.sendKeys(properties.getProperty("password"));
         // userName.sendKeys("standard_user");
 
         // password.sendKeys("secret_sauce");
         loginBtn.click();
-        //return new HomePage();
+        return new HomePage();
 
     }
 
-    public void verifyLoginPageTitle(){
 
 
+    public  String LoginPageTitle(){
+        return driver.getTitle();
     }
 
 
