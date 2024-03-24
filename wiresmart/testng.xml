@@ -1,0 +1,12 @@
+<suite name="wiresmarttestsuite" parallel="classes" thread-count="2">
+  <test name="testing">
+    <classes>
+      <class name="com.wiresmart.TestCases.LoginPageTest"> </class>
+
+      <class name="com.wiresmart.TestCases.HomePageTest"> </class>
+
+      <class name="com.wiresmart.TestCases.CartPageTest"> </class>
+
+    </classes>
+  </test>
+</suite>
