@@ -9,8 +9,5 @@
         <module name="wiresmart" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="wiresmart" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
