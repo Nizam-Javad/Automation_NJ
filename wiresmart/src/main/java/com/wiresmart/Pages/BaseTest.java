@@ -17,28 +17,28 @@ public class BaseTest {
     ;
     public static WebDriver driver;
 
-    private static Logger logger;
+    //private static Logger logger;
 
     public BaseTest() {
         try {
-            FileInputStream fileInputStream = new FileInputStream("D:\\Users\\MNR\\MNJ\\Mar\\Automation_NJ\\Automation_Test\\wiresmart\\src\\main\\java\\com\\wiresmart\\resources\\config.properties");
+            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\DELL\\TestingFramework1\\Automation_NJ\\wiresmart\\src\\main\\java\\com\\wiresmart\\resources\\config.properties");
             properties.load(fileInputStream);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        logger= LogManager.getLogger("com.wiresmart.Pages.BaseTest");
+      //  logger= LogManager.getLogger("com.wiresmart.Pages.BaseTest");
     }
 
     public static void initializeDriver() throws InterruptedException {
         // String browser = "chrome";
         // log = LogManager.getLogger(log.getClass().toString());
         // log.info("Getting the browser from the Config File");
-        logger.info("Getting the browser from the Config File");
+      //  logger.info("Getting the browser from the Config File");
         String browser = properties.getProperty("browser");
         // logger.info("Initializing the browser" + browser);
         // log.info("Initialiing the browser"+browser);
 
-        logger.info("Switching the Brwoser");
+   //     logger.info("Switching the Brwoser");
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
@@ -57,7 +57,7 @@ public class BaseTest {
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        logger.info("Launching the URL");
+    //    logger.info("Launching the URL");
         driver.get(properties.getProperty("url"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
