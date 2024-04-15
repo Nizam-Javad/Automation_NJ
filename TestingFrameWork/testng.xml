@@ -1,0 +1,8 @@
+<suite name="wiresmarttestsuite" parallel="methods" thread-count="3">
+    <test name="testing">
+        <classes>
+            <class name="tests.LoginTest"> </class>
+
+        </classes>
+    </test>
+</suite>
