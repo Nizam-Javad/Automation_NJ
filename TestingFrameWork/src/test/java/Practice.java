@@ -10,6 +10,7 @@ public class Practice {
     //s2.replace('c',3);
         s1.setCharAt(3,'Z');
     System.out.println(s1);
+    System.out.println(s2);
     /*char [] ch1=s1.toCharArray();
     for (int i=0;i<s1.length();i++){
         if(ch1[i]=='i'){
