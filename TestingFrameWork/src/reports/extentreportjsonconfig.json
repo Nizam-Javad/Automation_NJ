@@ -1,0 +1,13 @@
+{
+  "theme":"STANDARD",
+  "encoding":"ytf-8",
+  "protocol":"HTTPS",
+  "timelineEnabled":false,
+  "offlineMode":true,
+  "thumbnailForBase64":false,
+  "documentTitle":"ExtentReports",
+  "reportName":"TestingFrameWork",
+  "timeStampFormat":"MMM dd, yyyy HH:mm:ss a",
+  "js":"",
+  "css":""
+}
